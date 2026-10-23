@@ -10,7 +10,6 @@ function App() {
   const courses = ['java', 'React', 'Angular', 'Spring Boot', 'Python']
   const filteredCourses = courses.filter((course) =>
       course.toLowerCase().includes(search.trim().toLowerCase())
-
   )
   return (
     <>
@@ -50,9 +49,6 @@ function App() {
   </ul>
   {filteredCourses.length===0&& <p>No courses found.</p>}
 </div>
-
-
-
       <div className="ticks"></div>
 
       <section id="next-steps">
