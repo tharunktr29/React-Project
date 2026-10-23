@@ -6,7 +6,12 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [search, setSearch] = useState('')
+  const courses = ['java', 'React', 'Angular', 'Spring Boot', 'Python']
+  const filteredCourses = courses.filter((course) =>
+      course.toLowerCase().includes(search.trim().toLowerCase())
 
+  )
   return (
     <>
       <section id="center">
@@ -29,7 +34,25 @@ function App() {
           Count is {count}
         </button>
       </section>
-<p> message </p>
+<div className="search-container">
+  <h2>Search Courses</h2>
+  <input
+  type="search"
+  aria-label="Search courses"
+  placeholder="Enter a course name..."
+  value={search}
+  onChange={(event) => setSearch(event.target.value)}
+  />
+  <ul>
+  {filteredCourses.map((course)=>
+      (<li key={ course}>{course}</li>)
+  )}
+  </ul>
+  {filteredCourses.length===0&& <p>No courses found.</p>}
+</div>
+
+
+
       <div className="ticks"></div>
 
       <section id="next-steps">
