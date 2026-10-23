@@ -29,7 +29,7 @@ function App() {
           Count is {count}
         </button>
       </section>
-
+<p> message </p>
       <div className="ticks"></div>
 
       <section id="next-steps">
