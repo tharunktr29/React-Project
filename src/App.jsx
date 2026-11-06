@@ -73,7 +73,6 @@ function App() {
             </li>
           </ul>
         </div>
-        <p>hi</p>
         <div id="social">
           <svg className="icon" role="presentation" aria-hidden="true">
             <use href="/icons.svg#social-icon"></use>
